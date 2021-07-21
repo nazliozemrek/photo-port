@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Nav from './components/Nav';
-import About from './components/About';
-import Gallery from './components/Gallery';
+import React, { useState } from "react";
+import Nav from "./components/Nav";
+import About from "./components/About";
+import Gallery from "./components/Gallery";
 
 function App() {
   const [categories] = useState([
@@ -13,25 +13,20 @@ function App() {
     { name: 'food', description: 'Delicious delicacies' },
     { name: 'landscape', description: 'Fields, farmhouses, waterfalls, and the beauty of nature' },
   ]);
-
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
-
+const [currentCategory,setCurrentCategory] = useState(categories[0]);
   return (
     <div>
       <Nav
-        categories={categories}
-        setCurrentCategory={setCurrentCategory}
-        currentCategory={currentCategory}
+      categories = {categories}
+      setCurrentCategory={setCurrentCategory}
+      currentCategory={currentCategory}
       ></Nav>
       <main>
-        <div>
-          <Gallery></Gallery>
-          <About></About>
-        </div>
+        <Gallery></Gallery>
+        <About></About>
       </main>
     </div>
   );
 }
 
 export default App;
-
